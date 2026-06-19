@@ -1,0 +1,29 @@
+label: Contact
+heading: "Get in touch"
+
+intro: >-
+  If you are interested in my work, please reach out. I'm happy to have a chat
+  whether you are a patient with a question, a clinician wanting to connect, a
+  researcher looking for collaboration, or a journalist seeking expert comment.
+
+# Each link card has a label, a sub-line, a url, and an `icon` key that maps to
+# an inline SVG in _includes/contact.html (linkedin | email | calendar).
+links:
+  - icon: linkedin
+    url: "https://www.linkedin.com/in/richardhazlett/"
+    external: true
+    label: "LinkedIn"
+    sub: "linkedin.com/in/richardhazlett"
+  - icon: email
+    url: "mailto:richard@hazletthealth.co.uk"
+    label: "Email"
+    sub: "richard@hazletthealth.co.uk"
+  - icon: calendar
+    url: "https://calendly.com/richardhazlett/30min"
+    external: true
+    label: "Book a 30-minute call"
+    sub: "calendly.com/richardhazlett"
+
+# The contact form posts via a mailto: link (no server required), exactly like
+# the original. Set `form_action` to a Formspree/Netlify endpoint to upgrade it.
+form_action: ""

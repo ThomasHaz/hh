@@ -1,0 +1,19 @@
+{%- assign fm = site.footer_member -%}
+<footer>
+  {%- if fm %}
+  <div class="footer-member">
+    <span class="footer-member-label">{{ fm.label }}</span>
+    <a href="{{ fm.url }}" target="_blank" rel="noopener" class="footer-member-logo" title="{{ fm.name }}">
+      <img src="{{ fm.logo | relative_url }}" alt="{{ fm.name }}">
+    </a>
+  </div>
+  {%- endif %}
+  <div class="footer-inner">
+    <a href="{{ '/' | relative_url }}" class="footer-logo">{{ site.short_name }}</a>
+    <p class="footer-copy">© {{ site.copyright_year }} {{ site.copyright_name }}</p>
+    <button class="footer-admin-btn" onclick="openPrivacyModal()" title="Privacy &amp; cookies">privacy</button>
+  </div>
+  {%- if site.disclaimer %}
+  <p class="footer-disclaimer">{{ site.disclaimer }}</p>
+  {%- endif %}
+</footer>

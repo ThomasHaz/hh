@@ -1,0 +1,38 @@
+{%- comment -%}
+  On article pages, in-page anchors (#about) won't resolve, so we prefix them
+  with the home URL so the links still work from anywhere on the site.
+{%- endcomment -%}
+{%- assign home = '/' | relative_url -%}
+
+<nav>
+  <div class="nav-inner">
+    <a href="{{ home }}" class="nav-logo">
+      {{ site.short_name }}
+      <span>{{ site.tagline }}</span>
+    </a>
+    <ul class="nav-links">
+      {%- for item in site.data.nav %}
+      <li>
+        {%- assign href = item.url -%}
+        {%- if href contains '#' and item.external != true %}{% assign href = home | append: item.url %}{% endif -%}
+        <a href="{{ href }}"{% if item.external %} target="_blank" rel="noopener"{% endif %}>
+          {%- if item.image %}<img src="{{ item.image | relative_url }}" alt="{{ item.alt }}" style="height:1.1rem; vertical-align:middle;">{% else %}{{ item.title }}{% endif -%}
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  {%- for item in site.data.nav %}
+  {%- assign href = item.url -%}
+  {%- if href contains '#' and item.external != true %}{% assign href = home | append: item.url %}{% endif -%}
+  <a href="{{ href }}"{% if item.external %} target="_blank" rel="noopener"{% else %} onclick="toggleMenu()"{% endif %}>
+    {%- if item.image %}<img src="{{ item.image | relative_url }}" alt="{{ item.alt }}" style="height:1.1rem; vertical-align:middle;">{% else %}{{ item.title }}{% endif -%}
+  </a>
+  {%- endfor %}
+</div>

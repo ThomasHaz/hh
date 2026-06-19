@@ -1,0 +1,18 @@
+<div class="comments-section" id="commentsSection">
+  <h3 class="comments-heading">Comments &amp; discussion</h3>
+  <p class="comments-note">I welcome discussion on everything I write here. Medicine is rarely black and white, and botanical medicine shows even greater variance than most fields. I am genuinely open to other opinions and perspectives, and I read every comment.</p>
+  <p class="comments-note comments-note-policy">Comments are approved before they appear, so there may be a short delay. Frank discussion of drugs, drug use, and differing clinical views is welcome. Hateful or abusive comments are not.</p>
+  <div id="commentsMount">
+    {%- if site.cusdis_app_id and site.cusdis_app_id != "" %}
+    <div id="cusdis_thread"
+      data-host="https://cusdis.com"
+      data-app-id="{{ site.cusdis_app_id }}"
+      data-page-id="{{ page.slug }}"
+      data-page-title="{{ page.title | xml_escape }}"
+      data-page-url="{{ page.url | absolute_url }}"></div>
+    <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+    {%- else %}
+    <p class="comments-setup-msg">Comments will appear here once the discussion system has been set up.</p>
+    {%- endif %}
+  </div>
+</div>

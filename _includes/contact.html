@@ -1,0 +1,55 @@
+{%- assign c = site.data.contact -%}
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label">{{ c.label }}</div>
+    <h2 class="section-heading">{{ c.heading }}</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>{{ c.intro }}</p>
+        <div class="contact-links">
+          {%- for link in c.links %}
+          <a href="{{ link.url }}"{% if link.external %} target="_blank" rel="noopener"{% endif %} class="contact-link">
+            <div class="contact-link-icon">
+              {%- case link.icon -%}
+              {%- when 'linkedin' -%}
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              {%- when 'email' -%}
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              {%- when 'calendar' -%}
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              {%- endcase -%}
+            </div>
+            <div class="contact-link-text">
+              <strong>{{ link.label }}</strong>
+              <span>{{ link.sub }}</span>
+            </div>
+          </a>
+          {%- endfor %}
+        </div>
+      </div>
+
+      <div class="contact-form-area">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" id="formName">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="your@email.com" id="formEmail">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" placeholder="What is your message about?" id="formSubject">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="5" placeholder="Your message..." id="formMessage"></textarea>
+        </div>
+        <button class="btn btn-outline" onclick="handleFormSubmit()" data-email="{{ site.email }}" style="color:#fff; border-color:rgba(255,255,255,0.25); align-self:flex-start;">Send message</button>
+        <p class="form-note" id="formStatus"></p>
+      </div>
+    </div>
+  </div>
+</section>

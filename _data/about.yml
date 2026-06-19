@@ -1,0 +1,90 @@
+label: About
+heading_html: "A GP at the forefront<br>of cannabis medicine"
+
+# The three cards across the top of the About section. Clicking any of them
+# expands the body. A card may have a `tag`, an optional `heading` (h4),
+# an optional `logo` (with link), and a `body` paragraph.
+cards:
+  - tag: "Executive Committee"
+    logo: "/assets/img/mccs.png"
+    logo_alt: "Medical Cannabis Clinicians Society"
+    logo_url: "https://www.ukmccs.org/"
+    body: >-
+      The Medical Cannabis Clinicians Society is an independent body of over 500
+      UK clinicians producing national prescribing guidance, CPD-accredited
+      training, and good-practice standards. Its work includes a national
+      cannabis oil dosing guide, training police forces on the law around medical
+      cannabis and driving, advising the APPG on medical cannabis policy, and
+      supporting emerging medical cannabis frameworks internationally, from Greece
+      and Poland to Jamaica and Barbados. As an Executive Committee member,
+      Richard contributes to clinician education and clinical guidance, and
+      appeared as a panelist at the London Cannabis Symposium in 2025.
+
+  - tag: "Clinical Training"
+    heading: "Broad foundations"
+    body: >-
+      Clinical rotations across neurology, psychiatry, general practice,
+      paediatric surgery, and care of the elderly, alongside work in
+      neurodevelopmental assessment clinics, acute care, and with unaccompanied
+      asylum-seeker children. Working in East Leicester general practice, Richard
+      learned to conduct clinical examinations in Gujarati to serve his patient
+      community. This breadth of experience, from safeguarding medicals for
+      trafficked children to neurology clinics dominated by functional disorders,
+      shaped a consulting style built on meeting every patient where they are,
+      whatever their background or circumstances.
+
+  - tag: "Mental Health"
+    heading: "Early Intervention in Psychosis"
+    body: >-
+      Richard worked as a care coordinator in an Early Intervention in Psychosis
+      service in South Tottenham, supporting young people through a first episode
+      of psychosis using CBT and trauma-informed practice. Most of his patients
+      were cannabis users from a deprived part of the city, many had migrated to
+      the UK, and most carried significant childhood adversity. That combination
+      is known to raise the risk of psychosis, and working closely with these
+      young people taught him something the textbooks did not: cannabis was rarely
+      the root cause, but often the way they managed extraordinary levels of
+      trauma and stress. When the pressures flowing into a person's life exceed
+      what they can drain away, the result is crisis. That insight, that you must
+      address what fills the bucket rather than simply blame the tap, still shapes
+      how he assesses risk, history, and cannabis use today.
+
+# Paragraphs revealed when the About section is expanded.
+body:
+  - >-
+    I am a UK-based GP with a portfolio career spanning primary care,
+    out-of-hours services, and specialist medical cannabis practice. My academic
+    background reflects a long-standing interest in both conventional and
+    plant-based medicine: a BSc (Hons) in Herbal Medicine, a postgraduate diploma
+    in Mental Health Practice, and my medical degree (MBChB). The herbal medicine
+    training was a rigorous, clinically grounded, and evidence-based programme
+    encompassing quality control, research methodology, and supervised practice,
+    including time in NHS Dermatology at Whipps Cross Hospital. Few prescribers in
+    this field have formal training in both botanical pharmacology and medicine,
+    and that combination informs how I assess cannabis-based products and the
+    claims made about them.
+  - >-
+    My route into cannabis medicine ran through mental health. Years spent
+    supporting young people in crisis, alongside training in CBT and
+    trauma-informed approaches, taught me how much of good medicine is simply
+    listening properly. Many of the patients I now see carry significant
+    complexity, and that grounding shapes every consultation.
+  - >-
+    In medical cannabis practice I have delivered over 20,000 consultations, with
+    particular depth in neurodevelopmental disorders, chronic pain, anxiety, sleep
+    conditions, and complex high-utilisation patients. I work within the current
+    evidence base for efficacy and risk minimisation. Alongside clinical work I
+    train and mentor GPs and pharmacist prescribers entering this field, and
+    contribute regularly to multidisciplinary team discussions on complex cases.
+
+quote: >-
+  "This site is where I write about the research I find compelling, the clinical
+  questions I keep encountering, and the conversations that matter most in
+  cannabis medicine right now. The site itself is new, but many of the articles
+  here draw on reflections I have been collecting and anonymising over several
+  years of practice. Writing has always been how I process the clinical
+  complexity and emotional weight of caring for vulnerable patients every day,
+  and gathering those notes in one place felt like a natural next step. If you
+  are a clinician, researcher, journalist, or organisation working in this space,
+  I am glad to connect."
+quote_cite: "— Dr Richard Hazlett"

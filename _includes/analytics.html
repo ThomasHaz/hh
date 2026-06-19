@@ -1,0 +1,25 @@
+{%- assign a = site.analytics -%}
+{%- if a.umami_website_id and a.umami_website_id != "" %}
+<!-- Umami: always loads, no consent needed -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="{{ a.umami_website_id }}"></script>
+{%- endif %}
+{%- if a.ga4_measurement_id and a.ga4_measurement_id != "" %}
+<!-- GA4: only loads after consent (see assets/js/site.js consent banner) -->
+<script>
+  (function () {
+    if (localStorage.getItem('ga_consent') === 'granted') { loadGA(); }
+    function loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id={{ a.ga4_measurement_id }}';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', '{{ a.ga4_measurement_id }}'{% if a.ga4_cookie_domain and a.ga4_cookie_domain != "" %}, { 'cookie_domain': '{{ a.ga4_cookie_domain }}' }{% endif %});
+    }
+    window.loadGA = loadGA;
+  })();
+</script>
+{%- endif %}

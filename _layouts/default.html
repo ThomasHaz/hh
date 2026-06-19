@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  {%- include head.html -%}
+</head>
+<body>
+
+{%- include consent.html -%}
+{%- include nav.html -%}
+
+{{ content }}
+
+{%- include footer.html -%}
+
+<script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+</body>
+</html>

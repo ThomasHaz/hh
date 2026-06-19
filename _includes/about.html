@@ -1,0 +1,43 @@
+{%- assign ab = site.data.about -%}
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label">{{ ab.label }}</div>
+    <h2 class="section-heading">{{ ab.heading_html }}</h2>
+
+    <div class="about-cards-row" id="about-cards">
+      {%- for card in ab.cards %}
+      <div class="membership-card about-card-trigger" onclick="toggleAbout()">
+        {%- if card.logo %}
+        <div class="membership-header">
+          <span class="membership-tag">{{ card.tag }}</span>
+          <a href="{{ card.logo_url }}" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="display:block; margin-top:0.75rem;"><img class="membership-logo" src="{{ card.logo | relative_url }}" alt="{{ card.logo_alt }}"></a>
+        </div>
+        {%- else %}
+        <span class="membership-tag">{{ card.tag }}</span>
+        {%- endif %}
+        {%- if card.heading %}<h4>{{ card.heading }}</h4>{% endif %}
+        <p>{{ card.body }}</p>
+        <div class="about-card-arrow" style="text-align:center; color:var(--green-700, #2d6a4f); font-size:1.2rem;">↓</div>
+      </div>
+      {%- endfor %}
+    </div>
+
+    <div class="about-body" id="about-content" style="display:none;">
+      {%- for p in ab.body %}
+      <p>{{ p }}</p>
+      {%- endfor %}
+      <div class="about-collapse-btn">
+        <button onclick="toggleAbout()" aria-label="Collapse about section">↑</button>
+      </div>
+    </div>
+
+    {%- if ab.quote %}
+    <figure class="my-quote">
+      <blockquote>
+        <p>{{ ab.quote }}</p>
+      </blockquote>
+      {%- if ab.quote_cite %}<cite>{{ ab.quote_cite }}</cite>{% endif %}
+    </figure>
+    {%- endif %}
+  </div>
+</section>

@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{%- assign tagclass = page.tag | default: 'Reflections' | downcase | prepend: 'tag-' -%}
+{%- if page.read_time %}{% assign rt = page.read_time %}{% else %}{% assign words = content | number_of_words %}{% assign mins = words | plus: site.words_per_minute | minus: 1 | divided_by: site.words_per_minute %}{% if mins < 1 %}{% assign mins = 1 %}{% endif %}{% assign rt = mins | append: ' min read' %}{% endif -%}
+<article class="post-page">
+  <div class="post">
+    <a href="{{ '/' | relative_url }}#articles" class="post-back">&larr; All articles</a>
+    <span class="modal-tag {{ tagclass }}">{{ page.tag }}</span>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="modal-meta">{{ page.date | date: "%-d %B %Y" }} &middot; {{ rt }}</p>
+    <div class="modal-body">
+      {{ content }}
+    </div>
+    {%- include share-bar.html -%}
+    {%- include comments.html -%}
+  </div>
+</article>

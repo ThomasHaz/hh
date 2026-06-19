@@ -1,0 +1,35 @@
+<section id="articles">
+  <div class="section-inner">
+    <div class="articles-header">
+      <div>
+        <div class="section-label">Writing</div>
+        <h2 class="section-heading">Articles &amp; Reflections</h2>
+        <p class="section-sub">Clinical commentary, research discussion, and reflections on the practice of cannabis medicine.</p>
+      </div>
+    </div>
+
+    <div class="articles-grid" id="articlesGrid">
+      {%- for post in site.posts %}
+      {%- assign tagclass = post.tag | default: 'Reflections' | downcase | prepend: 'tag-' -%}
+      {%- if post.read_time %}{% assign rt = post.read_time %}{% else %}{% assign words = post.content | number_of_words %}{% assign mins = words | plus: site.words_per_minute | minus: 1 | divided_by: site.words_per_minute %}{% if mins < 1 %}{% assign mins = 1 %}{% endif %}{% assign rt = mins | append: ' min read' %}{% endif -%}
+      <a class="article-card" href="{{ post.url | relative_url }}">
+        <span class="article-tag {{ tagclass }}">{{ post.tag }}</span>
+        <h3>{{ post.title }}</h3>
+        <p class="article-excerpt">{{ post.excerpt }}</p>
+        {%- if post.media %}
+        <div class="article-media-badges">
+          {%- for m in post.media -%}
+          {%- if m == 'video' %}<span class="media-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Video</span>{% endif -%}
+          {%- if m == 'infographics' %}<span class="media-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Infographics</span>{% endif -%}
+          {%- endfor %}
+        </div>
+        {%- endif %}
+        <div class="article-meta">
+          <span class="article-date">{{ post.date | date: "%-d %B %Y" }} &middot; {{ rt }}</span>
+          <span class="article-read-more">Read &rarr;</span>
+        </div>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

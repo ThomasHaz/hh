@@ -1,0 +1,32 @@
+eyebrow: "hazletthealth.co.uk"
+
+# `heading_html` allows <br> and <em> for the italic accent.
+heading_html: "Medical cannabis,<br><em>clearly explained.</em>"
+
+description: >-
+  A resource for patients, clinicians, and researchers navigating the rapidly
+  evolving landscape of cannabis medicine — written from the front line of
+  clinical practice.
+
+credentials:
+  - "16 years of clinical experience across herbal medicine, early intervention in psychosis services, general practice, and cannabis medicine"
+  - "Special interest in neurodevelopmental conditions, complex PTSD, and complex multisystem illnesses such as EDS, MCAS, and POTS"
+  - "Medical Cannabis Clinicians Society, Executive Committee"
+
+actions:
+  - label: "Read the articles"
+    url: "#articles"
+    style: primary
+  - label: "About Dr Hazlett"
+    url: "#about"
+    style: outline
+
+photo: "/assets/img/hero-1.jpg"
+
+stats:
+  - number: "20k+"
+    label: "Cannabis consults"
+  - number: "16"
+    label: "Years clinical experience"
+  - number: "MCCS"
+    label: "Exec committee"

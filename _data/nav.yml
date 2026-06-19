@@ -1,0 +1,15 @@
+# Navigation links. `external: true` opens in a new tab with rel=noopener.
+# `image` renders an <img> instead of text (used for the Trustpilot badge).
+- title: About
+  url: "#about"
+- title: Articles
+  url: "#articles"
+- title: Contact
+  url: "#contact"
+- title: "LinkedIn ↗"
+  url: "https://www.linkedin.com/in/richardhazlett/"
+  external: true
+- image: "/assets/img/trustpilot.png"
+  alt: Trustpilot
+  url: "https://www.trustpilot.com/review/curaleafclinic.com?search=hazlett"
+  external: true

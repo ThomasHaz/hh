@@ -1,0 +1,33 @@
+{%- assign h = site.data.hero -%}
+<section class="hero" id="home">
+  <div class="hero-text">
+    <div class="hero-eyebrow">{{ h.eyebrow }}</div>
+    <h1>{{ h.heading_html }}</h1>
+    <p class="hero-desc">{{ h.description }}</p>
+    <div class="hero-creds">
+      {%- for c in h.credentials %}
+      <div class="cred-item"><span class="cred-dot"></span>{{ c }}</div>
+      {%- endfor %}
+    </div>
+    <div class="hero-actions">
+      {%- for a in h.actions %}
+      <a href="{% if a.url contains '#' %}{{ '/' | relative_url | append: a.url }}{% else %}{{ a.url }}{% endif %}" class="btn btn-{{ a.style | default: 'primary' }}">{{ a.label }}</a>
+      {%- endfor %}
+    </div>
+  </div>
+
+  <div class="hero-image">
+    {%- if h.photo %}<img class="hero-photo" src="{{ h.photo | relative_url }}" alt="">{% endif %}
+    <div class="hero-photo-overlay"></div>
+    {%- if h.stats %}
+    <div class="hero-stat-block">
+      {%- for s in h.stats %}
+      <div class="hero-stat">
+        <div class="hero-stat-num">{{ s.number }}</div>
+        <div class="hero-stat-label">{{ s.label }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+  </div>
+</section>

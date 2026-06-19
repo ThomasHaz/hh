@@ -1,0 +1,60 @@
+# ─────────────────────────────────────────────────────────────
+#  Site configuration
+#  Everything that was hardcoded in the old index.html now lives
+#  here (or in _data/). Edit these values, never the layouts.
+# ─────────────────────────────────────────────────────────────
+
+title: "Dr Richard Hazlett — Medical Cannabis Physician"
+short_name: "Dr Richard Hazlett"
+tagline: "Medical Cannabis Physician"
+description: >-
+  Clinical commentary, research discussion, and reflections on the practice
+  of cannabis medicine — written by Dr Richard Hazlett, GP and medical
+  cannabis physician.
+url: "hh.oniccah.com"
+baseurl: ""
+lang: en
+copyright_year: 2025
+copyright_name: "hazletthealth.co.uk"
+
+# Words-per-minute used to estimate reading time when a post does not
+# set `read_time` in its front matter.
+words_per_minute: 200
+
+disclaimer: >-
+  The content on this site is for educational and informational purposes only
+  and does not constitute medical advice. Always consult a qualified healthcare
+  professional regarding any medical condition or treatment.
+
+# ── Third-party services (leave blank to disable) ──
+analytics:
+  umami_website_id: "94ff5a8c-d101-47c1-869c-12e828f33646"
+  ga4_measurement_id: "G-B6E5QKPL79"
+  ga4_cookie_domain: "hazletthealth.co.uk"
+google_site_verification: "ysXS038J7iywo2-SA1ebm3s4ucv2kUdtwzBLC1jcPUc"
+cusdis_app_id: "7cff93a2-4ea5-453d-98e8-7a5c0eda613b"
+
+# Contact email used by the footer + the article share-by-email links
+email: "richard@hazletthealth.co.uk"
+
+# Membership badge shown in the footer
+footer_member:
+  label: "Member of"
+  name: "Medical Cannabis Clinicians Society"
+  url: "https://www.ukmccs.org/"
+  logo: "/assets/img/mccs.png"
+
+# ── Build settings ──
+# permalink: /articles/:title/
+collections:
+  posts:
+    output: true
+    permalink: /articles/:title
+sass:
+  style: compressed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
