@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
 # Run the site locally with:  bundle exec jekyll serve
-gem "jekyll", "~> 4.3"
-
+gem "jekyll", "~> 3.10.0"
+gem "github-pages", "~> 232", group: :jekyll_plugins
 # webrick is no longer bundled with Ruby 3.0+ and Jekyll's local server needs it
 gem "webrick", "~> 1.8"
 
