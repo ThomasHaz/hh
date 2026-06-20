@@ -26,4 +26,4 @@ links:
 
 # The contact form posts via a mailto: link (no server required), exactly like
 # the original. Set `form_action` to a Formspree/Netlify endpoint to upgrade it.
-form_action: ""
+form_action: "https://formspree.io/f/mykarowy"
