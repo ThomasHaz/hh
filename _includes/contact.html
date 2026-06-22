@@ -50,20 +50,20 @@
           <div class="form-row">
             <div class="form-group">
               <label>Name</label>
-              <input type="text" placeholder="Your name" id="formName">
+              <input type="text" placeholder="Your name" name="name" id="formName">
             </div>
             <div class="form-group">
               <label>Email</label>
-              <input type="email" placeholder="your@email.com" id="formEmail">
+              <input type="email" placeholder="your@email.com" name="email" id="formEmail">
             </div>
           </div>
           <div class="form-group">
             <label>Subject</label>
-            <input type="text" placeholder="What is your message about?" id="formSubject">
+            <input type="text" placeholder="What is your message about?" name="subject" id="formSubject">
           </div>
           <div class="form-group">
             <label>Message</label>
-            <textarea rows="5" placeholder="Your message..." id="formMessage"></textarea>
+            <textarea rows="5" placeholder="Your message..." name="message" id="formMessage"></textarea>
           </div>
 
           <!-- Honeypot decoys (names must match the form's honeypot settings). -->
@@ -81,3 +81,6 @@
     </div>
   </div>
 </section>
+
+
+<script src="/form.js" defer></script>
