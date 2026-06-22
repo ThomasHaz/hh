@@ -79,25 +79,6 @@ function copyArticleLink() {
   });
 }
 
-// ── CONTACT FORM (mailto, no server) ──
-function handleFormSubmit() {
-  var name = (document.getElementById('formName') || {}).value || '';
-  var email = (document.getElementById('formEmail') || {}).value || '';
-  var subject = (document.getElementById('formSubject') || {}).value || '';
-  var message = (document.getElementById('formMessage') || {}).value || '';
-  var status = document.getElementById('formStatus');
-  var btn = document.querySelector('[data-email]');
-  var to = btn ? btn.getAttribute('data-email') : '';
-  name = name.trim(); email = email.trim(); subject = subject.trim(); message = message.trim();
-  if (!name || !email || !message) {
-    if (status) { status.textContent = 'Please fill in your name, email, and message.'; status.style.color = 'rgba(255,120,120,0.9)'; }
-    return;
-  }
-  var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
-  window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject || 'Website enquiry') + '&body=' + encodeURIComponent(body);
-  if (status) { status.textContent = 'Opening your email client...'; status.style.color = 'rgba(160,220,180,0.9)'; }
-}
-
 // ── COOKIE CONSENT / GA4 ──
 function updateToggleUI(granted) {
   var knob = document.getElementById('ga-toggle-knob');
