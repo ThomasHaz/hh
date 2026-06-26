@@ -50,16 +50,16 @@
           <div class="form-row">
             <div class="form-group">
               <label>Name</label>
-              <input type="text" placeholder="Your name" name="name" id="formName">
+              <input type="text" placeholder="Your name" name="name" id="formName" required>
             </div>
             <div class="form-group">
               <label>Email</label>
-              <input type="email" placeholder="your@email.com" name="email" id="formEmail">
+              <input type="email" placeholder="your@email.com" name="email" id="formEmail" required>
             </div>
           </div>
           <div class="form-group">
             <label>Subject</label>
-            <input type="text" placeholder="What is your message about?" name="subject" id="formSubject">
+            <input type="text" placeholder="What is your message about?" name="subject" id="formSubject" required>
           </div>
           <div class="form-group">
             <label>Message</label>
@@ -71,10 +71,11 @@
             <input name="website" tabindex="-1" autocomplete="off" />
             <input name="company_url" tabindex="-1" autocomplete="off" />
           </div>
-
+<div class="form-group">
           <button class="btn btn-outline" type="submit">Send message</button>
-          <p class="form-note" id="formStatus"></p>
-          <div data-formhandler-status role="status" aria-live="polite"></div>
+          </div>
+          <!-- <p class="form-note" id="formStatus"></p> -->
+          <div class="form-note"data-formhandler-status role="status" aria-live="polite"></div>
         </form>
 <script src="{{ '/assets/js/form.js' | relative_url }}" defer></script>
       </div>
