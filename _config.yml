@@ -45,6 +45,8 @@ footer_member:
   logo: "/assets/img/mccs.png"
 
 # ── Build settings ──
+plugins:
+  - jekyll-sitemap
 # permalink: /articles/:title/
 collections:
   posts:
