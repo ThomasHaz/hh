@@ -16,3 +16,20 @@
     {%- endif %}
   </div>
 </div>
+<script>
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    // Look for the Cusdis iframe
+    const iframe = document.querySelector('#cusdis_thread iframe');
+    if (iframe && iframe.contentDocument) {
+      const doc = iframe.contentDocument;
+      iframe.style.minHeight = doc.body.scrollHeight + 'px';
+    }
+  });
+});
+
+observer.observe(document.body, {
+  childList: true,
+  subtree: true
+});
+</script>
