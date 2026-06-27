@@ -12,18 +12,26 @@ function toggleMenu() {
 
 // ── ABOUT: expand / collapse ──
 function toggleAbout() {
-  var content = document.getElementById('about-content');
+  
+  const content = document.getElementById('about-content');
   if (!content) return;
-  var arrows = document.querySelectorAll('.about-card-arrow');
+  const arrows = document.querySelectorAll('.about-card-arrow');
   if (content.style.display === 'none' || content.style.display === '') {
+    const yOffset = -80; 
     content.style.display = 'block';
     arrows.forEach(function (a) { a.style.display = 'none'; });
-    content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const y = content.getBoundingClientRect().top + window.scrollY + yOffset;
+    window.scrollTo({top: y, behavior: 'smooth'});
   } else {
+    const yOffset = -10; 
     content.style.display = 'none';
     arrows.forEach(function (a) { a.style.display = 'block'; });
-    var about = document.getElementById('about');
-    if (about) about.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const about = document.getElementById('about');
+    if (about) {
+      const y = about.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({top: y, behavior: 'smooth'});
+    }
   }
 }
 
