@@ -255,13 +255,16 @@ nav {
 
 .btn-outline {
   background: transparent;
-  color: var(--green-700);
-  border: 1px solid var(--green-400);
+  // color: var(--green-700);
+  // border: 1px solid var(--green-400);
+  color: #FFF;
+  border: 1px solid #FFF3;
 }
 
 .btn-outline:hover {
   background: var(--green-100);
   border-color: var(--green-600);
+  color: var(--green-700);
 }
 
 .hero-image {
@@ -1543,7 +1546,7 @@ footer {
 }
 
 .about-cards-row .membership-card {
-  flex: 1 1 200px;
+  flex: 1 1 230px;
   cursor: pointer;
   transition: box-shadow 0.15s;
 }
