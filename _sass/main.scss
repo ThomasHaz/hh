@@ -258,7 +258,9 @@ nav {
   color: var(--green-700);
   border: 1px solid var(--green-400);
 }
-
+.light {
+  color: #fff6;
+}
 .btn-outline:hover {
   background: var(--green-100);
   border-color: var(--green-600);
