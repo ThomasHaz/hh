@@ -11,7 +11,7 @@
     </div>
     <div class="hero-actions">
       {%- for a in h.actions %}
-      <a href="{% if a.url contains '#' %}{{ '/' | relative_url | append: a.url }}{% else %}{{ a.url }}{% endif %}" class="btn btn-{{ a.style | default: 'primary' }}">{{ a.label }}</a>
+      <a href="{% if a.url contains '#' %}{{ '/' | relative_url | append: a.url }}{% else %}{{ a.url }}{% endif %}" class="btn btn-{{ a.style | default: 'primary' }}" {% if a.url contains '#about' %}onclick="toggleAbout()"{% endif %}>{{ a.label }}</a>
       {%- endfor %}
     </div>
   </div>
